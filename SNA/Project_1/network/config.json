@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "Giorgos Chalkiopoulos"
+  },
+  "text": {
+    "more": "For this graph a node was selected and painted in red color. The red node acts as the \"Best Friend\" in the network. \nDifferent colors have been applied to the edges of:\n- this node,\n- the nodes in its ego network with depth 1,\n- the nodes in its ego network with depth 2, and\n- the remaining nodes.",
+    "intro": "Graph presenting the nodes\u0027 depth with the reference node being the node with id 100001462903816.",
+    "title": "SNA HW1"
+  },
+  "legend": {
+    "edgeLabel": "Friends on Facebook",
+    "colorLabel": "Depth from Selected Node",
+    "nodeLabel": "Individual"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": false,
+    "hoverBehavior": "default"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": false,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 10,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
