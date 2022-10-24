@@ -7,7 +7,6 @@ from utils import check
 from utils.generate_graph import GenerateGraph
 
 
-
 def has_euler_path(
         graph: Union[TUNGraph, TUNGraph, TUNGraphNodeI, TUNGraphEdgeI, TNGraph, TNGraphNodeI, TNGraphEdgeI, TNEANet]
 ) -> tuple:
