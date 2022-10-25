@@ -4,7 +4,7 @@ from snap import TUNGraph, TUNGraph, TUNGraphNodeI, TUNGraphEdgeI, TNGraph, TNGr
 
 import unittest
 from utils import check
-from utils.generate_graph import GenerateGraph
+from utils.helper_classes import GenerateGraph
 
 
 def has_euler_path(
