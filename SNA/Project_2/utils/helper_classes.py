@@ -1,6 +1,10 @@
 import snap
 import pandas as pd
-from utils.GOBALS import *
+from .GOBALS import *
+import time
+import random
+import multiprocessing
+
 
 class GenerateGraph:
 
@@ -27,6 +31,7 @@ class GenerateGraph:
 
         return self.graph
 
+
 class AlgorithmComparison:
 
     def __init__(self, nodes: int, iter: int, df: pd.DataFrame):
@@ -35,11 +40,10 @@ class AlgorithmComparison:
         self.df = df
         self.graph = self.generate_graph()
 
-
     def generate_graph(self) -> snap.GenSmallWorld:
         """Function that generates a random graph using the Watts-Strogatz model."""
-        Rnd = snap.TRnd(42)
-        return snap.GenSmallWorld(self.nodes, 20, 0.3, Rnd)
+        Rnd = snap.TRnd(1, 0)
+        return snap.GenSmallWorld(self.nodes, random.randint(5, 20), random.random(), Rnd)
 
     def highest_degrees(self) -> None:
         """Print the node with the highest degree along with it's degree"""
@@ -48,9 +52,9 @@ class AlgorithmComparison:
             if NI.GetDeg() > highest_deg[0]:
                 highest_deg = [NI.GetDeg(), NI.GetId()]
 
-
         print(f"The Node with the highest degree is:")
         print(f"ID: {highest_deg[1]: >6} \nDegree: {highest_deg[0]: <10}")
+        self.df.loc[self.iter, DEGREE_COLS] = [highest_deg[1], highest_deg[0]]
 
     def hub_and_auth(self) -> None:
         """Print the is and scores of the nodes with the highest Hubs and Authorities scores."""
@@ -73,15 +77,17 @@ class AlgorithmComparison:
 
 
     def run_community_detection(self, alg):
+        print(f"\nRunning for algorithm: {alg}")
+        start = time.time()
         modularity, CmtyV = getattr(self.graph, alg)()
-        print(f"Running for algorithm: {alg}")
-        for Cmty in CmtyV:
-            for NI in Cmty:
-                print(NI)
-        print("The modularity of the network is %f" % modularity)
+        end = time.time()
+
+        print(f"The modularity of the network is {modularity:.3f}.\nExecution time: {end-start:.3f}s\n")
 
     def print_results(self):
         self.highest_degrees()
         self.hub_and_auth()
         for alg in ("CommunityCNM", "CommunityGirvanNewman"):
             self.run_community_detection(alg)
+
+

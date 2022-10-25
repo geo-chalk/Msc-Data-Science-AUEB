@@ -17,7 +17,8 @@ def main():
     df = generate_dataframe()
     print(df.to_string(index=False))
 
-    for i, nodes in enumerate([50, 100, 1000]):
+    # --- For various nodes, compare and store algorithms --- #
+    for i, nodes in enumerate([50, 100, 200, 300, 400]):
         df.loc[i, BASIC_COLS] = [nodes, random.randint(5, 20), random.randint(0, 100)/100]
         print(df.to_string(index=False))
         AlgorithmComparison(nodes=nodes, iter=i, df=df).print_results()
