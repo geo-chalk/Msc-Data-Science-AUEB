@@ -1,3 +1,0 @@
-from snap import *
-
-
