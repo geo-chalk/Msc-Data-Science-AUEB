@@ -59,7 +59,7 @@ def main():
 
 
             # --- Save results to csv --- #
-            df.to_csv(f"project2-2_{algorithm}.csv", index=False)
+            df.to_csv(f"csv_files/project2-2_{algorithm}.csv", index=False)
 
     print(df.to_string(index=False))
 
