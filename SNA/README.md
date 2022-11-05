@@ -1,4 +1,4 @@
-# Social Network Analysis (Y1Q2)
+# Social Network Analysis (Y2Q2)
 This course covers data analysis on social networks, focusing on ways
 to handle large-scale networks effciently. The course provides the main theoretical results in social network
 mining as well as hands-on practice on key issues in the area.
