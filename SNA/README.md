@@ -11,10 +11,22 @@ mining as well as hands-on practice on key issues in the area.
 * in-class contribution (2%)
 
 ## Requirements
-Installing Snap.py
+### Project 1 - Snap.py
+
 Snap.py can be installed via the pip module. To install Snap.py, execute pip from the command line as follows:
 
 
 ```
 python -m pip install snap-stanford
 ```
+
+### Project 2 - Gephi
+ Gephi software can be downloaded through:
+ 
+```https://gephi.org/```
+
+### Project 3 - Eclipse
+
+Apache girpah: `https://giraph.apache.org/`
+
+Eclipse: `https://www.eclipse.org/`
