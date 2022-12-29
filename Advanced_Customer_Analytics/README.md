@@ -14,7 +14,7 @@ in detail the methodologies used in relationship marketing in order to gain acti
 
 2. Make sure that the website includes a free-text search box that users can use to search for products. 
 
-3. Email me your selection at ted@aueb.gr. Each student should work on a different website, so I will maintain the list of selected websites at the top of our Wiki. First come, first served. 
+3. Email me your selection at ****. Each student should work on a different website, so I will maintain the list of selected websites at the top of our Wiki. First come, first served. 
 
 4. Create a first Python Notebook with a function called scrape( ). The function should accept as a parameter a query (a word or short phrase).  The function should then use selenium to:
 
