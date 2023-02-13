@@ -7,6 +7,9 @@ from random import Random, randint
 import numpy as np
 import sys
 from pprint import pprint
+import pickle as pkl
+import os
+from pathlib import Path
 
 
 def compute_jaccard(data: pd.Series, threshold: float = 0.5) -> Dict[int, dict]:
@@ -205,7 +208,7 @@ def evaluate_jaccard(jaccard_scores: Dict[int, list],
                      similar_users: List[Set[int]],
                      n: int,
                      iteration: int,
-                     writer: csv.writer) -> defaultdict:
+                     writer: csv.writer = None) -> defaultdict:
     """
     Evaluate estimated jaccard scores against the actual jaccard scores & write the results to a csv file.
 
@@ -237,15 +240,70 @@ def evaluate_jaccard(jaccard_scores: Dict[int, list],
     pprint(dict(evaluation))
     return evaluation
 
-def progressbar(it, prefix="", size=60, out=sys.stdout):
-    """Python progress bar taken from https://stackoverflow.com/questions/3160699/python-progress-bar"""
 
-    count = len(it)
-    def show(j):
-        x = int(size*j/count)
-        print(f"{prefix}[{u'█'*x}{('.'*(size-x))}] {j}/{count}", end='\r', file=out, flush=True)
-    show(0)
-    for i, item in enumerate(it):
-        yield item
-        show(i+1)
-    print("\n", flush=True, file=out)
+def load_file(path: str) -> pd.DataFrame:
+    """Load a pickle file if it exists"""
+    try:
+        with open(path, 'rb') as f:
+            signature = pkl.load(f)
+            print(signature.shape)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Signature variable not loaded. Please run the notebook once again to load it, "
+                                f"or place the '{path}' file under {os.getcwd()}.")
+
+
+def print_similar_pairs(jaccard_scores: list) -> None:
+    """Print the pair of users with similar Jaccard Scores (>=0.5)"""
+
+    # output scores
+    similar_users = []
+    for user1, sim_users in jaccard_scores.items():
+        for user_score in sim_users:
+            similar_users.append({user1, user_score[0]})
+            print(f"Pair: ({user1}, {user_score[0]}) - Jaccard Score: {user_score[1]*100:.2f}%")
+    return similar_users
+
+
+def load_file(path: str) -> pd.DataFrame:
+    """Load a pickle file if it exists"""
+    try:
+        with open(path, 'rb') as f:
+            _signature = pkl.load(f)
+            return _signature
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Signature variable not loaded. Please run the notebook once again to load it, "
+                                f"or place the '{path}' file under {os.getcwd()}.")
+
+
+def calculate_similar_users_LSH(r: int, iteration: int) -> List[set]:
+    """
+    Calculate similar users based on the LSH estimation
+
+    Args:
+        r: number of rows per band
+        iteration: current iteration
+
+    Returns:
+        similar_users_band: distinct pair of candidate pairs
+
+    """
+
+    similar_users_band: list = []
+    signature = load_file(path=Path("files") / f"signature_200_{iteration}.pkl")
+
+    # split into r rows
+    for i, start in enumerate(range(0, signature.shape[1], r)):
+
+        chunk = signature.loc[:,start:(i+1)*r-1]
+
+        # fetch duplicate rows and sort by columns. The indices will match in a step of 2
+        candidates = chunk[chunk.duplicated(keep=False)].sort_values(by=[col for col in chunk.columns])
+
+        # if we find similar rows, take the pairs per two
+        if not candidates.empty:
+
+            for i, k in zip(candidates.index[0::2], candidates.index[1::2]):
+                if {i, k} not in similar_users_band:
+                    similar_users_band.append({i, k})
+
+    return similar_users_band
