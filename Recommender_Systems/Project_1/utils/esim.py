@@ -1,6 +1,7 @@
 import pandas as pd
 from datasketch import MinHash, MinHashLSH
 from typing import List
+import sys
 
 
 class Esim:
@@ -32,14 +33,15 @@ class Esim:
         """Converts a given float rating to a string value"""
         polarity = 'A'  # average
 
-        if rating < 3:
+        if rating < 2.5:
             polarity = 'N'  # negative
-        elif rating > 3:
+        elif rating > 3.5:
             polarity = 'P'  # positive
 
         return polarity
 
     def load_ratings(self, focus: List[str]) -> dict:
+        from .helper_functions import progressbar
 
         """
         Loads all the ratings submitted by each user or all ratings submitted for a beer (based on focus)
@@ -121,7 +123,7 @@ class Esim:
 
             index.insert(eid, rating_hash)  # index the entity based on its hash
 
-        print(focus + '-based index created')
+        print(focus + '-based index created', end='\r', file=sys.stdout, flush=True)
 
     def jaccard(self, s1: set, s2: set):
         '''
