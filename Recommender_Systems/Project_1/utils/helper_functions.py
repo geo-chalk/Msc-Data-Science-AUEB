@@ -1,7 +1,7 @@
 import sys
 from .esim import Esim
 from collections import defaultdict
-from typing import Union
+from typing import Union, Optional
 import pandas as pd
 import pickle
 from .Loggers import BaseLogger
@@ -74,7 +74,7 @@ def recommend_mb(indexer:Esim,
 
     for beer, score in srt:
 
-        title=indexer.beer_mapping.get(beer)
+        title=indexer.beer_mapping.get(str(beer))
 
         rat=my_ratings.get(beer,None)
 
@@ -84,7 +84,7 @@ def recommend_mb(indexer:Esim,
 
         cnt+=1
 
-        print('\n',beer, title, score)
+        print(beer, title,  f"{score:.2f}")
 
         if cnt==rec_num:break
 
@@ -140,7 +140,7 @@ def recommend_ub(indexer: Esim,
     for beer, score in srt:  # for each beer
 
         try:
-            title = indexer.beer_mapping.get(beer)  # get the title
+            title = indexer.beer_mapping.get(str(beer))  # get the title
         except KeyError:
             title = 'placeholder'
 
@@ -151,7 +151,7 @@ def recommend_ub(indexer: Esim,
             continue
 
         cnt += 1  # one more recommendation
-        if verbose >= 1: print('\n', beer, title, score)  # print
+        if verbose >= 1: print(beer, title, f"{score:.2f}")  # print
 
         if cnt == rec_num: break  # stop once you 've made enough recommendations
 
@@ -160,14 +160,13 @@ def recommend_ub(indexer: Esim,
     return already_rated
 
 
-def load_indexer(focus: Union[str, None] = None,
-                  reviews: Union[pd.DataFrame, None] = None,
-                  beer_mapping:  Union[dict, None] = None,
-                  user_mapping:  Union[dict, None] = None,
-                  beer_id_col: Union[str, None] = 'beer_id',
-                  user_id_col:  Union[str, None] = 'user_id',
-                  indexer_path: Union[str, None] = None
-                  ) -> Esim:
+def load_indexer(focus: Optional[str] = None,
+                 reviews: Optional[pd.DataFrame] = None,
+                 beer_mapping: Optional[dict] = None,
+                 user_mapping: Optional[dict] = None,
+                 beer_id_col: Optional[str] = 'beer_id',
+                 user_id_col: Optional[str] = 'user_id',
+                 indexer_path: Optional[str] = None) -> Esim:
     """
     Loads the indexer object classes for beer_based and user_based reviews.
     Attempts to use the

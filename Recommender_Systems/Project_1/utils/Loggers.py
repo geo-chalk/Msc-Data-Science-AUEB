@@ -2,8 +2,6 @@ import logging
 from typing import Union
 
 
-
-
 class BaseLogger:
     """Create the base logger object"""
     level: Union[str, int] = logging.INFO

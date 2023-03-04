@@ -123,7 +123,7 @@ class Esim:
 
             index.insert(eid, rating_hash)  # index the entity based on its hash
 
-        print(focus + '-based index created', end='\r', file=sys.stdout, flush=True)
+        print(focus + '-based index created')
 
     def jaccard(self, s1: set, s2: set):
         '''
