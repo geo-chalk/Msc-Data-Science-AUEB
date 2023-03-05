@@ -84,7 +84,8 @@ def recommend_mb(indexer:Esim,
 
         cnt+=1
 
-        print(beer, title,  f"{score:.2f}")
+        if verbose >= 1:
+            print(beer, title,  f"{score:.2f}")
 
         if cnt==rec_num:break
 

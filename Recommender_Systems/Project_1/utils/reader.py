@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 from .esim import Esim
 import csv
-
+import numpy as np
 
 @dataclass
 class BeerReview(object):
@@ -98,6 +98,16 @@ class ReviewReader(BaseLogger):
     def test(self) -> pd.DataFrame:
         return self.reviews_df.iloc[int((self.reviews_df.shape[0] * 0.3)):, :]
 
+    @property
+    def test_users(self) -> np.array:
+        np.random.seed(42)
+        _users = [2123, 1667, 1722, 1706, 1245, 2712, 1332, 1030]
+        sample = np.random.choice(np.where(( self.reviews_df.groupby("user_id")["user_id"].count() > 500) & (
+        ( self.reviews_df.groupby("user_id")["user_id"].count() < 1000)))[0], 100)
+
+        return np.setdiff1d(sample, np.array(_users))
+
+
     def filter_reviews(self) -> None:
         """Filters the reviews dataframe to keep users based on defined thresholds"""
 
@@ -181,5 +191,7 @@ class ReviewReader(BaseLogger):
         self.filter_reviews()
         self.subset_reviews()
         self.discretize_ratings()
+
+        self.logger.info(f"Processing completed.")
 
         return self.reviews_df

@@ -93,13 +93,15 @@ def recommend_lda(groups: list,
             if cnt == rec_num:
                 break
 
-        score: float = list(already_rated.values()).count("P")/len(already_rated.values())
-        print(f"Group: {i+1}")
-        print("Positive ratio:", f'{score*100:.2f}%')
-        print("Already Rated number of beers:", f'{len(already_rated.values())}', end="\n\n")
-
-        # keep best scores
-        if score > best_score:
-            best_recommendations = recommendations
+        print(f"Group: {i + 1}")
+        if already_rated:
+            score: float = list(already_rated.values()).count("P")/len(already_rated.values())
+            print("Positive ratio:", f'{score*100:.2f}%')
+            print("Already Rated number of beers:", f'{len(already_rated.values())}', end="\n\n")
+            # keep best scores
+            if score > best_score:
+                best_recommendations = recommendations
+        else:
+            print("No beers already rated in the group")
 
     return best_recommendations
