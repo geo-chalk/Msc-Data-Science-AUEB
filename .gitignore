@@ -2,4 +2,4 @@
 scrap.ipynb
 .*ipynb_checkpoints
 Recommender_Systems/Project_1/beer_reviews.csv
-Recommender_Systems/Project_1/.*pkl
+.*.pkl
