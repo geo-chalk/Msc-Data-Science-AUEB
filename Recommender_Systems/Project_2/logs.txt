@@ -1,0 +1,398 @@
+[2023-03-20 00:45:33,873] INFO [BeeerAdvocateScraper] - Opened file at reviews\10099_2093_reviews.csv
+[2023-03-20 00:45:33,874] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/10099/2093/
+[2023-03-20 00:45:35,837] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 00:45:37,453] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 01:18:21,602] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 01:18:21,602] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 01:18:21,602] INFO [BeeerAdvocateScraper] - Opened file at reviews\112_412_reviews.csv
+[2023-03-20 01:18:21,602] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/112/412/
+[2023-03-20 01:18:23,298] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 01:18:24,971] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 01:45:11,267] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 01:45:11,268] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 01:45:11,268] INFO [BeeerAdvocateScraper] - Opened file at reviews\140_1904_reviews.csv
+[2023-03-20 01:45:11,268] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/140/1904/
+[2023-03-20 01:45:12,836] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 01:45:14,942] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 02:08:00,117] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 02:08:00,117] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 02:08:00,117] INFO [BeeerAdvocateScraper] - Opened file at reviews\287_1093_reviews.csv
+[2023-03-20 02:08:00,117] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/287/1093/
+[2023-03-20 02:08:01,663] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 02:08:03,520] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 02:38:53,168] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 02:38:53,168] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 02:38:53,168] INFO [BeeerAdvocateScraper] - Opened file at reviews\147_4083_reviews.csv
+[2023-03-20 02:38:53,168] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/147/4083/
+[2023-03-20 02:38:54,734] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 02:38:56,556] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 03:00:41,321] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 03:00:41,321] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 03:00:41,321] INFO [BeeerAdvocateScraper] - Opened file at reviews\147_92_reviews.csv
+[2023-03-20 03:00:41,331] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/147/92/
+[2023-03-20 03:00:43,468] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 03:00:45,109] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 03:23:14,493] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 03:23:14,493] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 03:23:14,493] INFO [BeeerAdvocateScraper] - Opened file at reviews\140_276_reviews.csv
+[2023-03-20 03:23:14,493] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/140/276/
+[2023-03-20 03:23:16,201] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 03:23:18,009] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 03:47:24,790] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 03:47:24,790] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 03:47:24,790] INFO [BeeerAdvocateScraper] - Opened file at reviews\147_88_reviews.csv
+[2023-03-20 03:47:24,790] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/147/88/
+[2023-03-20 03:47:26,625] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 03:47:28,374] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 04:10:41,345] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 04:10:41,345] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 04:10:41,345] INFO [BeeerAdvocateScraper] - Opened file at reviews\863_7971_reviews.csv
+[2023-03-20 04:10:41,345] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/863/7971/
+[2023-03-20 04:10:43,056] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 04:10:45,117] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 04:42:07,639] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 04:42:07,640] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 04:42:07,643] INFO [BeeerAdvocateScraper] - Opened file at reviews\1199_11757_reviews.csv
+[2023-03-20 04:42:07,643] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/1199/11757/
+[2023-03-20 04:42:09,324] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 04:42:11,043] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 05:17:03,949] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 05:17:03,949] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 05:17:03,949] INFO [BeeerAdvocateScraper] - Opened file at reviews\140_2671_reviews.csv
+[2023-03-20 05:17:03,949] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/140/2671/
+[2023-03-20 05:17:05,407] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 05:17:07,306] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 05:34:21,235] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 05:34:21,235] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 05:34:21,238] INFO [BeeerAdvocateScraper] - Opened file at reviews\22_34_reviews.csv
+[2023-03-20 05:34:21,239] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/22/34/
+[2023-03-20 05:34:22,965] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 05:34:25,117] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 05:55:54,662] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 05:55:54,662] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 05:55:54,662] INFO [BeeerAdvocateScraper] - Opened file at reviews\10099_6108_reviews.csv
+[2023-03-20 05:55:54,662] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/10099/6108/
+[2023-03-20 05:55:56,725] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 05:55:58,434] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 06:20:14,290] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 06:20:14,290] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 06:20:14,305] INFO [BeeerAdvocateScraper] - Opened file at reviews\345_1013_reviews.csv
+[2023-03-20 06:20:14,305] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/345/1013/
+[2023-03-20 06:20:15,675] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 06:20:17,724] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 06:33:58,579] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 06:33:58,579] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 06:33:58,595] INFO [BeeerAdvocateScraper] - Opened file at reviews\222_695_reviews.csv
+[2023-03-20 06:33:58,595] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/222/695/
+[2023-03-20 06:34:00,005] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 06:34:02,240] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 06:51:35,937] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 06:51:35,937] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 06:51:35,940] INFO [BeeerAdvocateScraper] - Opened file at reviews\45_680_reviews.csv
+[2023-03-20 06:51:35,941] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/45/680/
+[2023-03-20 06:51:37,273] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 06:51:39,169] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 07:07:05,884] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 07:07:05,884] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 07:07:05,884] INFO [BeeerAdvocateScraper] - Opened file at reviews\287_17112_reviews.csv
+[2023-03-20 07:07:05,884] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/287/17112/
+[2023-03-20 07:07:07,883] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 07:07:09,846] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 07:34:58,234] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 07:34:58,234] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 07:34:58,234] INFO [BeeerAdvocateScraper] - Opened file at reviews\35_104_reviews.csv
+[2023-03-20 07:34:58,234] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/35/104/
+[2023-03-20 07:34:59,678] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 07:35:01,585] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 07:54:53,286] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 07:54:53,287] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 07:54:53,290] INFO [BeeerAdvocateScraper] - Opened file at reviews\147_1160_reviews.csv
+[2023-03-20 07:54:53,290] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/147/1160/
+[2023-03-20 07:54:54,655] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 07:54:56,550] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 08:12:37,831] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 08:12:37,831] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 08:12:37,831] INFO [BeeerAdvocateScraper] - Opened file at reviews\345_1005_reviews.csv
+[2023-03-20 08:12:37,831] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/345/1005/
+[2023-03-20 08:12:39,246] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 08:12:40,986] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 08:28:49,500] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 08:28:49,500] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 08:28:49,516] INFO [BeeerAdvocateScraper] - Opened file at reviews\664_73_reviews.csv
+[2023-03-20 08:28:49,516] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/664/73/
+[2023-03-20 08:28:50,876] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 08:28:52,969] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 08:42:12,479] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 08:42:12,479] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 08:42:12,494] INFO [BeeerAdvocateScraper] - Opened file at reviews\132_355_reviews.csv
+[2023-03-20 08:42:12,494] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/132/355/
+[2023-03-20 08:42:13,897] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 08:42:15,793] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 08:58:45,994] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 08:58:45,994] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 08:58:46,006] INFO [BeeerAdvocateScraper] - Opened file at reviews\259_1708_reviews.csv
+[2023-03-20 08:58:46,006] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/259/1708/
+[2023-03-20 08:58:47,377] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 08:58:49,398] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 09:19:29,850] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 09:19:29,850] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 09:19:29,850] INFO [BeeerAdvocateScraper] - Opened file at reviews\209_754_reviews.csv
+[2023-03-20 09:19:29,850] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/209/754/
+[2023-03-20 09:19:31,254] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 09:19:33,007] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 09:37:06,394] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 09:37:06,394] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 09:37:06,394] INFO [BeeerAdvocateScraper] - Opened file at reviews\207_645_reviews.csv
+[2023-03-20 09:37:06,394] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/207/645/
+[2023-03-20 09:37:07,831] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 09:37:10,024] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 09:57:10,567] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 09:57:10,567] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 09:57:10,570] INFO [BeeerAdvocateScraper] - Opened file at reviews\39_131_reviews.csv
+[2023-03-20 09:57:10,570] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/39/131/
+[2023-03-20 09:57:11,969] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 09:57:13,878] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 10:12:09,779] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 10:12:09,779] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 10:12:09,779] INFO [BeeerAdvocateScraper] - Opened file at reviews\140_30420_reviews.csv
+[2023-03-20 10:12:09,779] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/140/30420/
+[2023-03-20 10:12:11,545] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 10:12:13,496] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 10:35:25,032] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 10:35:25,032] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 10:35:25,032] INFO [BeeerAdvocateScraper] - Opened file at reviews\113_571_reviews.csv
+[2023-03-20 10:35:25,032] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/113/571/
+[2023-03-20 10:35:26,608] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 10:35:28,550] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 10:50:22,241] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 10:50:22,241] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 10:50:22,241] INFO [BeeerAdvocateScraper] - Opened file at reviews\215_2512_reviews.csv
+[2023-03-20 10:50:22,241] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/215/2512/
+[2023-03-20 10:50:23,644] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 10:50:25,513] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 11:07:18,980] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 11:07:18,980] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 11:07:18,980] INFO [BeeerAdvocateScraper] - Opened file at reviews\252_731_reviews.csv
+[2023-03-20 11:07:18,980] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/252/731/
+[2023-03-20 11:07:20,396] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 11:07:22,192] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 11:26:01,062] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 11:26:01,062] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 11:26:01,078] INFO [BeeerAdvocateScraper] - Opened file at reviews\610_2751_reviews.csv
+[2023-03-20 11:26:01,078] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/610/2751/
+[2023-03-20 11:26:02,668] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 11:26:04,582] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 11:42:24,524] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 11:42:24,524] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 11:42:24,524] INFO [BeeerAdvocateScraper] - Opened file at reviews\694_15881_reviews.csv
+[2023-03-20 11:42:24,524] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/694/15881/
+[2023-03-20 11:42:26,062] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 11:42:27,791] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 12:00:31,663] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 12:00:31,663] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 12:00:31,663] INFO [BeeerAdvocateScraper] - Opened file at reviews\1199_19960_reviews.csv
+[2023-03-20 12:00:31,663] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/1199/19960/
+[2023-03-20 12:00:33,650] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 12:00:35,763] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 12:28:52,892] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 12:28:52,892] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 12:28:52,908] INFO [BeeerAdvocateScraper] - Opened file at reviews\37_129_reviews.csv
+[2023-03-20 12:28:52,908] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/37/129/
+[2023-03-20 12:28:54,501] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 12:28:56,679] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 12:42:03,754] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 12:42:03,754] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 12:42:03,754] INFO [BeeerAdvocateScraper] - Opened file at reviews\610_3158_reviews.csv
+[2023-03-20 12:42:03,770] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/610/3158/
+[2023-03-20 12:42:05,387] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 12:42:07,322] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 12:52:51,046] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 12:52:51,046] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 12:52:51,046] INFO [BeeerAdvocateScraper] - Opened file at reviews\72_224_reviews.csv
+[2023-03-20 12:52:51,046] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/72/224/
+[2023-03-20 12:52:52,463] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 12:52:54,373] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 13:04:06,622] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 13:04:06,622] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 13:04:06,638] INFO [BeeerAdvocateScraper] - Opened file at reviews\35_102_reviews.csv
+[2023-03-20 13:04:06,638] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/35/102/
+[2023-03-20 13:04:08,080] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 13:04:09,958] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 13:20:54,036] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 13:20:54,037] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 13:20:54,039] INFO [BeeerAdvocateScraper] - Opened file at reviews\42_141_reviews.csv
+[2023-03-20 13:20:54,039] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/42/141/
+[2023-03-20 13:20:55,462] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 13:20:57,458] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 13:34:01,534] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 13:34:01,534] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 13:34:01,534] INFO [BeeerAdvocateScraper] - Opened file at reviews\345_1010_reviews.csv
+[2023-03-20 13:34:01,534] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/345/1010/
+[2023-03-20 13:34:03,002] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 13:34:05,050] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 13:46:03,284] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 13:46:03,285] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 13:46:03,286] INFO [BeeerAdvocateScraper] - Opened file at reviews\147_1056_reviews.csv
+[2023-03-20 13:46:03,288] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/147/1056/
+[2023-03-20 13:46:05,027] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 13:46:06,940] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 14:00:13,597] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 14:00:13,603] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 14:00:13,603] INFO [BeeerAdvocateScraper] - Opened file at reviews\10099_6260_reviews.csv
+[2023-03-20 14:00:13,603] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/10099/6260/
+[2023-03-20 14:00:15,448] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 14:00:17,586] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 14:14:34,238] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 14:14:34,238] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 14:14:34,238] INFO [BeeerAdvocateScraper] - Opened file at reviews\35_101_reviews.csv
+[2023-03-20 14:14:34,238] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/35/101/
+[2023-03-20 14:14:35,720] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 14:14:38,012] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 14:27:52,934] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 14:27:52,934] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 14:27:52,950] INFO [BeeerAdvocateScraper] - Opened file at reviews\345_14916_reviews.csv
+[2023-03-20 14:27:52,950] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/345/14916/
+[2023-03-20 14:27:54,377] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 14:27:56,451] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 14:37:02,809] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 14:37:02,809] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 14:37:02,825] INFO [BeeerAdvocateScraper] - Opened file at reviews\132_1118_reviews.csv
+[2023-03-20 14:37:02,825] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/132/1118/
+[2023-03-20 14:37:04,216] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 14:37:06,423] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 14:47:11,877] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 14:47:11,877] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 14:47:11,880] INFO [BeeerAdvocateScraper] - Opened file at reviews\28_63_reviews.csv
+[2023-03-20 14:47:11,881] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/28/63/
+[2023-03-20 14:47:13,322] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 14:47:15,394] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 15:00:53,665] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 15:00:53,665] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 15:00:53,665] INFO [BeeerAdvocateScraper] - Opened file at reviews\10099_9086_reviews.csv
+[2023-03-20 15:00:53,665] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/10099/9086/
+[2023-03-20 15:00:55,397] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 15:00:57,398] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 15:19:02,689] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 15:19:02,705] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 15:19:02,705] INFO [BeeerAdvocateScraper] - Opened file at reviews\22_30_reviews.csv
+[2023-03-20 15:19:02,705] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/22/30/
+[2023-03-20 15:19:04,141] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 15:19:06,219] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 15:30:40,024] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 15:30:40,024] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 15:30:40,024] INFO [BeeerAdvocateScraper] - Opened file at reviews\22_33_reviews.csv
+[2023-03-20 15:30:40,024] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/22/33/
+[2023-03-20 15:30:41,345] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 15:30:43,413] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 15:41:42,776] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 15:41:42,776] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 15:41:42,776] INFO [BeeerAdvocateScraper] - Opened file at reviews\2681_34483_reviews.csv
+[2023-03-20 15:41:42,776] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/2681/34483/
+[2023-03-20 15:41:44,247] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 15:41:46,051] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 16:02:15,082] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 16:02:15,082] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 16:02:15,082] INFO [BeeerAdvocateScraper] - Opened file at reviews\10099_1161_reviews.csv
+[2023-03-20 16:02:15,082] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/10099/1161/
+[2023-03-20 16:02:16,738] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 16:02:19,044] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 16:15:24,577] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 16:15:24,577] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 16:15:24,577] INFO [BeeerAdvocateScraper] - Opened file at reviews\1549_10672_reviews.csv
+[2023-03-20 16:15:24,577] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/1549/10672/
+[2023-03-20 16:15:26,708] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 16:15:28,567] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 16:42:16,973] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 16:42:16,973] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 16:42:16,973] INFO [BeeerAdvocateScraper] - Opened file at reviews\10099_1180_reviews.csv
+[2023-03-20 16:42:16,973] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/10099/1180/
+[2023-03-20 16:42:18,629] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 16:42:20,574] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 16:52:02,804] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 16:52:02,804] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 16:52:02,804] INFO [BeeerAdvocateScraper] - Opened file at reviews\287_1444_reviews.csv
+[2023-03-20 16:52:02,804] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/287/1444/
+[2023-03-20 16:52:04,409] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 16:52:06,530] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 17:06:16,988] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 17:06:16,989] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 17:06:16,991] INFO [BeeerAdvocateScraper] - Opened file at reviews\42_3457_reviews.csv
+[2023-03-20 17:06:16,992] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/42/3457/
+[2023-03-20 17:06:18,459] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 17:06:20,234] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 17:20:43,784] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 17:20:43,784] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 17:20:43,784] INFO [BeeerAdvocateScraper] - Opened file at reviews\192_607_reviews.csv
+[2023-03-20 17:20:43,784] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/192/607/
+[2023-03-20 17:20:45,386] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 17:20:47,480] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 17:39:16,685] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 17:39:16,686] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 17:39:16,689] INFO [BeeerAdvocateScraper] - Opened file at reviews\147_8951_reviews.csv
+[2023-03-20 17:39:16,689] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/147/8951/
+[2023-03-20 17:39:18,486] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 17:39:20,254] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 17:50:47,812] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 17:50:47,812] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 17:50:47,812] INFO [BeeerAdvocateScraper] - Opened file at reviews\73_226_reviews.csv
+[2023-03-20 17:50:47,812] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/73/226/
+[2023-03-20 17:50:49,511] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 17:50:51,490] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 18:05:35,856] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 18:05:35,872] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 18:05:35,872] INFO [BeeerAdvocateScraper] - Opened file at reviews\10099_33832_reviews.csv
+[2023-03-20 18:05:35,872] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/10099/33832/
+[2023-03-20 18:05:37,748] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 18:05:40,036] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 18:19:35,144] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 18:19:35,144] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 18:19:35,148] INFO [BeeerAdvocateScraper] - Opened file at reviews\83_248_reviews.csv
+[2023-03-20 18:19:35,148] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/83/248/
+[2023-03-20 18:19:36,834] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 18:19:38,795] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 18:32:15,862] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 18:32:15,862] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 18:32:15,862] INFO [BeeerAdvocateScraper] - Opened file at reviews\147_90_reviews.csv
+[2023-03-20 18:32:15,862] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/147/90/
+[2023-03-20 18:32:17,635] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 18:32:19,725] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 18:42:17,277] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 18:42:17,277] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 18:42:17,277] INFO [BeeerAdvocateScraper] - Opened file at reviews\113_782_reviews.csv
+[2023-03-20 18:42:17,277] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/113/782/
+[2023-03-20 18:42:18,905] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 18:42:21,084] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 18:45:18,748] INFO [BeeerAdvocateScraper] - Opened file at reviews\113_782_reviews.csv
+[2023-03-20 18:45:18,748] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/113/782/
+[2023-03-20 18:45:21,386] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 18:45:23,214] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 18:54:29,772] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 18:54:29,772] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 18:54:29,775] INFO [BeeerAdvocateScraper] - Opened file at reviews\147_38470_reviews.csv
+[2023-03-20 18:54:29,776] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/147/38470/
+[2023-03-20 18:54:31,253] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 18:54:33,148] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 19:06:49,449] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 19:06:49,450] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 19:06:49,454] INFO [BeeerAdvocateScraper] - Opened file at reviews\207_1696_reviews.csv
+[2023-03-20 19:06:49,454] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/207/1696/
+[2023-03-20 19:06:50,813] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 19:06:52,830] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 19:18:42,868] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 19:18:42,868] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 19:18:42,868] INFO [BeeerAdvocateScraper] - Opened file at reviews\132_56973_reviews.csv
+[2023-03-20 19:18:42,868] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/132/56973/
+[2023-03-20 19:18:44,613] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 19:18:46,541] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 19:26:50,279] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 19:26:50,279] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 19:26:50,279] INFO [BeeerAdvocateScraper] - Opened file at reviews\42_142_reviews.csv
+[2023-03-20 19:26:50,279] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/42/142/
+[2023-03-20 19:26:51,628] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 19:26:53,524] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
+[2023-03-20 19:36:56,267] INFO [BeeerAdvocateScraper] - Reached Last review Page.
+[2023-03-20 19:36:56,267] INFO [BeeerAdvocateScraper] - All reviews Loaded.
+[2023-03-20 19:36:56,267] INFO [BeeerAdvocateScraper] - Opened file at reviews\30_22352_reviews.csv
+[2023-03-20 19:36:56,267] INFO [BeeerAdvocateScraper] - Loading Page https://www.beeradvocate.com/beer/profile/30/22352/
+[2023-03-20 19:36:57,688] INFO [BeeerAdvocateScraper] - Starting page iteration.
+[2023-03-20 19:36:59,735] INFO [BeeerAdvocateScraper] - Beer Info retrieved.
