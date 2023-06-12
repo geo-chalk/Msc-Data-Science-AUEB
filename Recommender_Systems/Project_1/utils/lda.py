@@ -68,40 +68,53 @@ def recommend_lda(groups: list,
     best_recommendations = []
     best_score: float = 0
 
-
     for i, category in enumerate(groups):
 
         # category metrics
         recommendations: list = []
         already_rated = {}
-        cnt = 0
+        rated_count = 0
+        positive_ratio = {}
 
         # for each category keep positive reviews. See how many the user has rated
-        for beer_id, beer, score in category:  # for each beer
+        for i, (beer_id, beer, score) in enumerate(category):  # for each beer
 
-
-            rat = previous_ratings.get(beer_id, None)
-            if rat:  # beer already rated
-                already_rated[beer] = rat  # store the rating
-                continue
-
-            # only recommend positive beers
-            if score == 'P':
-                recommendations.append((beer_id, beer))
-                cnt += 1  # one more recommendation
-
-            if cnt == rec_num:
+            if i == rec_num:
                 break
 
-        print(f"Group: {i + 1}")
+            rat = previous_ratings.get(beer_id, None)
+            if rat:
+                already_rated[beer]=rat
+                if rat == "P":
+                    rated_count += 1
+
+            count = (i+1)
+            if count == 10:
+                positive_ratio[10] = rated_count / count
+            elif count == 30:
+                positive_ratio[30] = rated_count / count
+            elif count == 50:
+                positive_ratio[50] = rated_count / count
+            elif count == 100:
+                positive_ratio[100] = rated_count / count
+
+            # only recommend positive beers
+            if score == 'P' and not already_rated.get(beer):
+                recommendations.append((beer_id, beer))
+
+        print(f"\n\nGroup: {i + 1}")
         if already_rated:
-            score: float = list(already_rated.values()).count("P")/len(already_rated.values())
-            print("Positive ratio:", f'{score*100:.2f}%')
-            print("Already Rated number of beers:", f'{len(already_rated.values())}', end="\n\n")
+
+            print("Already Rated number of beers:", f'{len(already_rated.values())}')
+            print(f"Positive Ratio for the first 10 beers: {positive_ratio.get(10, 0)*100:.2f}%")
+            print(f"Positive Ratio for the first 30 beers: {positive_ratio.get(30, 0)*100:.2f}%")
+            print(f"Positive Ratio for the first 50 beers: {positive_ratio.get(50, 0)*100:.2f}%")
+            current_score = positive_ratio.get(50, 0)*100
             # keep best scores
-            if score > best_score:
+            if current_score > best_score:
                 best_recommendations = recommendations
+                best_score = current_score
         else:
             print("No beers already rated in the group")
 
-    return best_recommendations
+    return best_recommendations, already_rated

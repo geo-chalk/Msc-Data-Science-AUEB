@@ -40,13 +40,30 @@ def recommend(uid:int,
     rec_set = set()  # set of beer ids to be recommended
 
     already_rated = {}
-    for beer in original_indexes_sorted:  # for each beer id
+    rated_count = 0
+    positive_ratio = {}
+    for i, beer in enumerate(original_indexes_sorted):  # for each beer id
+
+        if i == rec_num:
+            break
+
         if beer not in user_ratings:  # beer has not already been rated
             rec_set.add(beer)  # add to the set
 
-            if len(rec_set) == rec_num: break
         else:
             already_rated[beer_mapping.get(str(beer))] = user_ratings.get(beer)
+            rated_count += 1
+
+        count = (i+1)
+        if count == 10:
+            positive_ratio[10] = rated_count / count
+        elif count == 30:
+            positive_ratio[30] = rated_count / count
+        elif count == 50:
+            positive_ratio[50] = rated_count / count
+        elif count == 100:
+            positive_ratio[100] = rated_count / count
+
 
     # make a data frame with only the recommended movies
     rec_df = pd.DataFrame(beers_df[beers_df.beer_id.isin(rec_set)])
@@ -58,7 +75,7 @@ def recommend(uid:int,
     rec_df = rec_df.sort_values(['predicted_rating'], ascending=False)
     rec_df["pred_rating_discr"] = rec_df.apply(lambda x: "P" if x["predicted_rating"] > 3.5 else "-", axis=1)
 
-    return rec_df, already_rated
+    return rec_df, already_rated, positive_ratio
 
 
 def initialize_svd(reviews: pd.DataFrame) -> tuple:

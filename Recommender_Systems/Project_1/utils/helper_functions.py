@@ -68,11 +68,13 @@ def recommend_mb(indexer:Esim,
 
     if verbose >= 1: print('\nI suggest the following beers because they are similar to the beers you already like:\n')
 
-    cnt=0
-
     already_rated={}
+    rated_count = 0
+    positive_ratio = {}
 
-    for beer, score in srt:
+    for i, (beer, score) in enumerate(srt):
+
+        if i == rec_num: break  # stop once you 've made enough recommendations
 
         title=indexer.beer_mapping.get(str(beer))
 
@@ -80,17 +82,25 @@ def recommend_mb(indexer:Esim,
 
         if rat:
             already_rated[title]=rat
-            continue
+            if rat == "P":
+                rated_count += 1
 
-        cnt+=1
+        count = (i+1)
+        if count == 10:
+            positive_ratio[10] = rated_count / count
+        elif count == 30:
+            positive_ratio[30] = rated_count / count
+        elif count == 50:
+            positive_ratio[50] = rated_count / count
+        elif count == 100:
+            positive_ratio[100] = rated_count / count
 
-        if verbose >= 1:
+        if verbose >= 1 and not already_rated.get(title):
             print(beer, title,  f"{score:.2f}")
 
-        if cnt==rec_num:break
 
     if verbose >= 2: print('\n',already_rated)
-    return already_rated
+    return already_rated, positive_ratio
 
 
 def recommend_ub(indexer: Esim,
@@ -135,10 +145,14 @@ def recommend_ub(indexer: Esim,
     cnt = 0  # count number of recommendations made
 
     already_rated = {}
+    rated_count = 0
+    positive_ratio = {}
 
     previous_ratings = {x: y for x, y in indexer.user_ratings[user]}
 
-    for beer, score in srt:  # for each beer
+    for i, (beer, score) in enumerate(srt):  # for each beer
+
+        if i == rec_num: break  # stop once you 've made enough recommendations
 
         try:
             title = indexer.beer_mapping.get(str(beer))  # get the title
@@ -147,18 +161,28 @@ def recommend_ub(indexer: Esim,
 
         rat = previous_ratings.get(beer, None)
 
-        if rat:  # beer already rated
-            already_rated[title] = rat  # store the rating
-            continue
+        if rat:
+            already_rated[title]=rat
+            if rat == "P":
+                rated_count += 1
 
-        cnt += 1  # one more recommendation
-        if verbose >= 1: print(beer, title, f"{score:.2f}")  # print
+        count = (i+1)
+        if count == 10:
+            positive_ratio[10] = rated_count / count
+        elif count == 30:
+            positive_ratio[30] = rated_count / count
+        elif count == 50:
+            positive_ratio[50] = rated_count / count
+        elif count == 100:
+            positive_ratio[100] = rated_count / count
 
-        if cnt == rec_num: break  # stop once you 've made enough recommendations
+        if verbose >= 1 and not already_rated.get(title):
+            print(beer, title, f"{score:.2f}")  # print
 
-    if verbose >= 2: print('\n', already_rated)
+    if verbose >= 2:
+        print('\n', already_rated)
 
-    return already_rated
+    return already_rated, positive_ratio
 
 
 def load_indexer(focus: Optional[str] = None,
