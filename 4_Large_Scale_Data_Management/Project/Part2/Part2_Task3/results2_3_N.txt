@@ -1,0 +1,36 @@
++------+--------+------+-----------------+------+
+|dep_id|dep_name|emp_id|         emp_name|dep_id|
++------+--------+------+-----------------+------+
+|     7|   Dep G|     1| Elizabeth Jordan|     7|
+|     2|   Dep B|     2|  Nancy Blanchard|     2|
+|     4|   Dep D|     3|   Dustin Tureson|     4|
+|     7|   Dep G|     4|  Melissa Mcglone|     7|
+|     7|   Dep G|     5|   William Varela|     7|
+|     1|   Dep A|     6|   Timothy Minert|     1|
+|     3|   Dep C|     7|    Suzanne Adams|     3|
+|     3|   Dep C|     8|   Anthony Lovell|     3|
+|     4|   Dep D|     9|  James Wickstrom|     4|
+|     7|   Dep G|    10|     Tommy Cannon|     7|
+|     2|   Dep B|    11|       Dona Kneip|     2|
+|     2|   Dep B|    12|   Kelly Brummett|     2|
+|     3|   Dep C|    13|    James Brunson|     3|
+|     2|   Dep B|    14|    Thomas Jenson|     2|
+|     2|   Dep B|    15|Kathleen Flannery|     2|
+|     6|   Dep F|    16|        Sara Wier|     6|
+|     2|   Dep B|    17|    Robert Hawkin|     2|
+|     2|   Dep B|    18|      Leone Regan|     2|
+|     2|   Dep B|    19|  Cindy Alexander|     2|
+|     2|   Dep B|    20|    Joanna Robles|     2|
++------+--------+------+-----------------+------+
+only showing top 20 rows
+
+== Physical Plan ==
+*(2) BroadcastHashJoin [dep_id#0], [cast(dep_id#6 as int)], Inner, BuildLeft
+:- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, true] as bigint)))
+:  +- *(1) Project [dep_id#0, dep_name#1]
+:     +- *(1) Filter isnotnull(dep_id#0)
+:        +- *(1) FileScan parquet [dep_id#0,dep_name#1] Batched: true, Format: Parquet, Location: InMemoryFileIndex[hdfs://master:9000/home/user/project/parquet/departmentsR.parquet], PartitionFilters: [], PushedFilters: [IsNotNull(dep_id)], ReadSchema: struct<dep_id:int,dep_name:string>
++- *(2) Project [emp_id#4, emp_name#5, dep_id#6]
+   +- *(2) Filter isnotnull(dep_id#6)
+      +- *(2) FileScan parquet [emp_id#4,emp_name#5,dep_id#6] Batched: true, Format: Parquet, Location: InMemoryFileIndex[hdfs://master:9000/home/user/project/parquet/employeesR.parquet], PartitionFilters: [], PushedFilters: [IsNotNull(dep_id)], ReadSchema: struct<emp_id:int,emp_name:string,dep_id:string>
+Time with choosing join type enabled is 12.4215 sec.

@@ -1,0 +1,28 @@
++----+---------------------------------+----------+
+|year|name                             |rating    |
++----+---------------------------------+----------+
+|1996|Mars Attacks!                    |15.63424  |
+|1997|La vita è bella                  |39.39497  |
+|1998|Six Days Seven Nights            |18.324219 |
+|1999|American Pie                     |18.344227 |
+|2000|O Auto da Compadecida            |23.950396 |
+|2001|Monsters Inc.                    |26.419962 |
+|2002|Ice Age                          |17.328902 |
+|2003|School of Rock                   |17.95142  |
+|2004|Shark Tale                       |17.999273 |
+|2005|Charlie and the Chocolate Factory|22.038405 |
+|2006|Bandidas                         |19.294832 |
+|2007|Ratatouille                      |20.50803  |
+|2008|Kung Fu Panda                    |16.897541 |
+|2009|The Hangover                     |23.947351 |
+|2010|Grown Ups                        |23.981251 |
+|2011|The Hangover Part II             |21.893532 |
+|2012|Ted                              |19.638605 |
+|2013|The Hangover Part III            |25.085639 |
+|2014|Big Hero 6                       |213.849907|
+|2015|Minions                          |547.488298|
+|2016|Deadpool                         |187.860492|
+|2017|Guardians of the Galaxy Vol. 2   |185.330992|
+|2018|Iron Sky: The Coming Race        |1.917649  |
++----+---------------------------------+----------+
+

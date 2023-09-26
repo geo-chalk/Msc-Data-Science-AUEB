@@ -1,0 +1,39 @@
++------+--------+------+-------------------+------+
+|dep_id|dep_name|emp_id|           emp_name|dep_id|
++------+--------+------+-------------------+------+
+|     1|   Dep A|     6|     Timothy Minert|     1|
+|     1|   Dep A|    22|Katherine Roundtree|     1|
+|     1|   Dep A|    28|       Douglas Frye|     1|
+|     1|   Dep A|    34|         Bobby Benz|     1|
+|     1|   Dep A|    38|  Michael Lovecchio|     1|
+|     1|   Dep A|    41|     Jamie Jennings|     1|
+|     1|   Dep A|    49|       Joseph Faust|     1|
+|     6|   Dep F|    16|          Sara Wier|     6|
+|     6|   Dep F|    29|       Alicia Nolen|     6|
+|     6|   Dep F|    43|     Nellie Sawchuk|     6|
+|     6|   Dep F|    45|     Blanche Strand|     6|
+|     6|   Dep F|    46|    Angela Hatfield|     6|
+|     6|   Dep F|    47|       Barbara Gill|     6|
+|     3|   Dep C|     7|      Suzanne Adams|     3|
+|     3|   Dep C|     8|     Anthony Lovell|     3|
+|     3|   Dep C|    13|      James Brunson|     3|
+|     5|   Dep E|    21|      Edward Hodges|     5|
+|     5|   Dep E|    32|        George Paul|     5|
+|     5|   Dep E|    35|         Ted Conant|     5|
+|     4|   Dep D|     3|     Dustin Tureson|     4|
++------+--------+------+-------------------+------+
+only showing top 20 rows
+
+== Physical Plan ==
+*(5) SortMergeJoin [dep_id#0], [cast(dep_id#6 as int)], Inner
+:- *(2) Sort [dep_id#0 ASC NULLS FIRST], false, 0
+:  +- Exchange hashpartitioning(dep_id#0, 200)
+:     +- *(1) Project [dep_id#0, dep_name#1]
+:        +- *(1) Filter isnotnull(dep_id#0)
+:           +- *(1) FileScan parquet [dep_id#0,dep_name#1] Batched: true, Format: Parquet, Location: InMemoryFileIndex[hdfs://master:9000/home/user/project/parquet/departmentsR.parquet], PartitionFilters: [], PushedFilters: [IsNotNull(dep_id)], ReadSchema: struct<dep_id:int,dep_name:string>
++- *(4) Sort [cast(dep_id#6 as int) ASC NULLS FIRST], false, 0
+   +- Exchange hashpartitioning(cast(dep_id#6 as int), 200)
+      +- *(3) Project [emp_id#4, emp_name#5, dep_id#6]
+         +- *(3) Filter isnotnull(dep_id#6)
+            +- *(3) FileScan parquet [emp_id#4,emp_name#5,dep_id#6] Batched: true, Format: Parquet, Location: InMemoryFileIndex[hdfs://master:9000/home/user/project/parquet/employeesR.parquet], PartitionFilters: [], PushedFilters: [IsNotNull(dep_id)], ReadSchema: struct<emp_id:int,emp_name:string,dep_id:string>
+Time with choosing join type disabled is 21.8382 sec.
