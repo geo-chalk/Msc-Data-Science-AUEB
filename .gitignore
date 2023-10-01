@@ -3,7 +3,6 @@ scrap.ipynb
 .*ipynb_checkpoints
 Recommender_Systems/Project_1/beer_reviews.csv
 .*.pkl
+.*.gdf
 
 Recommender_Systems/Project_2/reviews
-
-11_Social_Network_Analysis/Project_1/Gephi/facebook.gdf

@@ -1,4 +1,4 @@
-# Data visualization and communication (Y1Q2)
+# Data visualization and communication (Y2Q1)
 Communicating clearly and effectively about the patterns we find in data is a key skill for a successful data
 scientist. Visualizations are graphical depictions that can improve comprehension. 
 Collaborative filtering Visualizations will be paired with verbal analyses and reporting. 
