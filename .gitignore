@@ -1,8 +1,8 @@
 .idea
 scrap.ipynb
-.*ipynb_checkpoints
+*ipynb_checkpoints
 Recommender_Systems/Project_1/beer_reviews.csv
-.*.pkl
-.*.gdf
+*.pkl
+*.gdf
 
 Recommender_Systems/Project_2/reviews
