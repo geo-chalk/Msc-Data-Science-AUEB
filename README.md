@@ -40,9 +40,9 @@ Each project contains the solution that was submitted, usually consisting of a r
 the work of the professors, the handouts and data are not included in the repository. In cases where the data is
 publicly available, corresponding links for data download are provided.
 
-<div style="text-align: right;">  
+<p align="right">
     <a href="#table-of-contents">Back to top</a>  
-</div>  
+</p>  
 
 ---
 
@@ -61,9 +61,9 @@ projects, etc.). Moreover, the final grade of each course is mentioned. However,
 the aggregated grade, including the final exam. Most projects received a grade of 10/10, with some exceptions where the
 grade was 9.5/10.
 
-<div style="text-align: right;">  
+<p align="right">
     <a href="#table-of-contents">Back to top</a>  
-</div>  
+</p>  
 
 ---
 
@@ -110,9 +110,9 @@ whether this master's degree is suited for them.
       commensurate value. In my opinion, the program was too expensive, especially when comparing the price to other
       public universities across Greece.
 
-<div style="text-align: right;">  
+<p align="right">
     <a href="#table-of-contents">Back to top</a>  
-</div>  
+</p>  
 
 ---
 
@@ -149,9 +149,9 @@ In this section, I've highlighted some of the best assessments and projects, acc
     - Folder: [Machine Learning and Computational Techniques](./Machine%20Learning%20and%20Computational%20Techniques)
 
 
-<div style="text-align: right;">  
+<p align="right">
     <a href="#table-of-contents">Back to top</a>  
-</div>  
+</p>  
 
 ---
 
@@ -212,9 +212,9 @@ journey more enjoyable.
 
 At this point I had gathered 78 ECTS points thus didn't have to take any courses.
 
-<div style="text-align: right;">  
+<p align="right">
     <a href="#table-of-contents">Back to top</a>  
-</div>  
+</p>  
 
 ---
 
@@ -229,9 +229,9 @@ contained herein.** It's important to adhere to the academic integrity policies 
 when using this repository as a reference. Copying or submitting any part of this work as your own without proper
 attribution may violate academic integrity rules and regulations.
 
-<div style="text-align: right;">  
+<p align="right">
     <a href="#table-of-contents">Back to top</a>  
-</div>  
+</p>  
 
 --- 
 
@@ -243,7 +243,7 @@ reach out to me:
 - **Name:** George Chalkiopoulos
 - **Email:** geo.chalkiopoulos [at] gmail [dot] com
 
-<div style="text-align: right;">  
+<p align="right">
     <a href="#table-of-contents">Back to top</a>  
-</div>  
+</p> 
 
