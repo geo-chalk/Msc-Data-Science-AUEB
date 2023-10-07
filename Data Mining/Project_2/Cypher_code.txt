@@ -1,0 +1,318 @@
+
+Cypher code for the Citation Network
+
+Steps followed for the loading of the data and the creation of the network model
+
+- First step: load articles' data and create Articles' node
+
+LOAD CSV FROM "file:///articles_data.csv" AS row
+CREATE (n:Articles
+{article_id:row[0],title:row[1],year:row[2],venue:row[3],abstract:row[4]})
+
+--------------------------------------------------------------------------------------------------------------
+
+- Second step: creation of constraints for enhanced efficiency
+
+-----mention that we encountered problems in reading the file with the authors
+	so we overcame the obstacle by creating constraints---------
+CREATE CONSTRAINT FOR (n:Articles) REQUIRE n.article_id IS UNIQUE;
+
+--------------------------------------------------------------------------------------------------------------
+
+- Third step: load authors' data and create Authors' node
+
+LOAD CSV FROM 'file:///authors_data.csv' AS row 
+WITH row[0] AS author_article_id, row[1] AS author_name 
+CREATE(b:Authors {author_article_id:author_article_id, author_name:author_name})
+
+--------------------------------------------------------------------------------------------------------------
+
+- Fourth step: create relationship 'WROTE' between Authos & Articles
+
+MATCH (a:Authors), (b:Articles)
+WHERE a.author_article_id = b.article_id
+CREATE (a)-[rel:WROTE]->(b)
+RETURN count(rel)
+
+--------------------------------------------------------------------------------------------------------------
+
+- Fifth step: visualize the relationship created ('WROTE')
+
+MATCH p=()-[r:WROTE]->() RETURN p LIMIT 25
+
+--------------------------------------------------------------------------------------------------------------
+
+- Sixth step: load references dataset and create relationship 'CITES' between the article ids
+
+LOAD CSV FROM "file:///references.csv" AS row
+MATCH (a1:Articles {article_id:row[0]}),(a2:Articles {article_id:row[1]})
+CREATE (a1)-[:CITES]->(a2);
+
+--------------------------------------------------------------------------------------------------------------
+
+- Seventh step: visualize the relationship created ('CITES')
+
+MATCH p=()-[r:CITES]->() RETURN p LIMIT 25
+
+--------------------------------------------------------------------------------------------------------------
+
+- Last step: visualize the database created
+
+call db.schema.visualization
+
+______________________________________________________________________________________________________________
+Queries' code:
+
+ _________
+|         |
+| Query 1 |
+|_________|
+
+MATCH (a:Authors)-[:WROTE]->(p:Articles)<-[:CITES]-(c:Articles)
+WHERE a.author_name = "Roman Słowiński"
+RETURN p.title, count(c) AS citations
+ORDER BY citations DESC
+LIMIT 5
+
+
+ _________
+|         |
+| Query 2 |
+|_________|
+
+MATCH (a1:Authors)-[:WROTE]->(n:Articles)
+MATCH (a2:Authors)-[:WROTE]->(n:Articles)
+WHERE a1.author_name<>a2.author_name
+RETURN a1.author_name,COUNT(DISTINCT a2.author_name) AS collaborations
+ORDER BY collaborations DESC LIMIT 5
+
+
+ _________
+|         |
+| Query 3 |
+|_________|
+
+MATCH (a1:Authors)-[:WROTE]->(n:Articles)
+MATCH (a2:Authors)-[:WROTE]->(n:Articles)
+WHERE a1.author_name<>a2.author_name
+WITH a1,n, collect(a2.author_name) as collaborations
+WHERE size(collaborations) = 1
+RETURN a1.author_name,COUNT(n.article_id) AS papers_with_no_collab
+ORDER BY papers_with_no_collab DESC LIMIT 1
+
+
+ _________
+|         |
+| Query 4 |
+|_________|
+
+MATCH (a:Authors)-[r:WROTE]->(m:Articles)
+WHERE m.venue CONTAINS 'Lecture Notes in Computer Science' AND m.year="2009"
+RETURN a.author_name, COUNT(*) AS papers
+ORDER BY papersDESC
+LIMIT 1
+
+
+ _________
+|         |
+| Query 5 |
+|_________|
+
+MATCH (a:Authors)-[r:WROTE]->(m:Articles)
+WHERE m.year='2001' AND m.title CONTAINS "Data Mining"
+RETURN m.venue,COUNT(*) AS count_of_papers
+ORDER BY count_of_papers DESC
+LIMIT 1
+
+
+ _________
+|         |
+| Query 6 |
+|_________|
+
+MATCH (a1:Articles)-[r:CITES]->(a2:Articles)
+RETURN a2.title, COUNT(*) AS citations
+ORDER BY citations DESC
+LIMIT 5
+
+
+ _________
+|         |
+| Query 7 |
+|_________|
+
+MATCH (a:Authors)-[r:WROTE]->(m:Articles)
+WHERE m.abstract CONTAINS 'collaborative filtering' AND
+m.abstract CONTAINS 'recommendation system'
+RETURN collect(a.author_name) AS Authors, m.title 
+
+______________________________________________________________________________________________________________
+|		  |
+| Link Prediction:|
+|_________________|
+
+//Creating the CoAuthors relation:
+
+MATCH (a1:Authors)-[:WROTE]->(p:Articles)<-[:WROTE]-(a2:Authors)
+WITH a1, a2, p.year AS year
+ ORDER BY a1, year
+WITH a1,a2, collect(year)[0] AS year, COUNT(*) AS count_
+MERGE (a1)-[e:CoAuthor {year:year}]-(a2)
+SET e.count_=count_
+
+
+//Checking the relationship created:
+
+MATCH p=()-[r:CoAuthor]->() RETURN p LIMIT 50
+
+
+//Converting year to Integer:
+
+MATCH (a:Authors)-[r:CoAuthor]->(b:Authors)
+SET r.year = toInteger(r.year)
+
+
+//Create the subgraph:
+
+CALL gds.graph.project('predictionGraph',
+['Authors'],
+[{CoAuthor:{orientation:'UNDIRECTED', properties:['count_','year']}}]
+)
+
+
+//Create train data as CoAuthorEarly (until 2005)
+MATCH (a)-[r:CoAuthor]->(b) 
+WHERE r.year < 2006
+MERGE (a)-[:CoAuthorEarly {year: r.year}]-(b);
+
+
+//Create test data as CoAuthorLate (after 2006):
+
+MATCH (a)-[r:CoAuthor]->(b) 
+WHERE r.year >= 2006
+MERGE (a)-[:CoAuthorLate {year: r.year}]-(b);
+
+
+//Run Adamic Adar link prediction:
+
+WITH ["Hidenao Abe","Mario Lamberger","Kaoru Inoue"
+     ,"Gabriel Thierrin","Marcin Gogolewski"] AS author_names
+UNWIND author_names AS name
+MATCH (other:Authors)
+MATCH (author:Authors {author_name: name})
+OPTIONAL MATCH (author:Authors) - [r:CoAuthorLate] - (other:Authors)
+WHERE NOT (author) - [:CoAuthorEarly] - (other)
+WITH DISTINCT
+     author.author_name AS author
+    ,other.author_name AS coauthor
+    ,gds.alpha.linkprediction.adamicAdar(author, other, {relationshipQuery: "CoAuthorEarly"}) AS score
+    ,COUNT(r) AS authors_found_in_test
+WITH DISTINCT author,coauthor,score,authors_found_in_test
+ ,CASE WHEN score > 0 AND authors_found_in_test = 1 THEN 1 ELSE 0 END AS TP
+ ,CASE WHEN score > 0 AND authors_found_in_test = 0 THEN 1 ELSE 0 END AS FP
+ ,CASE WHEN score = 0 AND authors_found_in_test = 0 THEN 1 ELSE 0 END AS TN
+ ,CASE WHEN score = 0 AND authors_found_in_test = 1 THEN 1 ELSE 0 END AS FN
+ ,CASE WHEN score > 0 AND authors_found_in_test = 1 THEN score ELSE 0 END AS TP_score
+ ,CASE WHEN score > 0 AND authors_found_in_test = 0 THEN score ELSE 0 END AS FP_score
+WITH DISTINCT(author) AS author
+ ,SUM(TP) AS TP
+ ,SUM(TP_score) AS TP_score
+ ,SUM(FP) AS FP
+ ,SUM(FP_score) AS FP_score
+ ,SUM(TN) AS TN,SUM(FN) AS FN
+RETURN  author,TP,FP,TN,FN
+,CASE WHEN TP + FN=0 THEN null ELSE toFloat(TP)/( TP + FN ) END AS Recall
+,CASE WHEN TP + FP=0 THEN null ELSE toFloat(TP) / ( TP + FP) END AS Presision
+,CASE WHEN TP + FP + FN + TN=0 THEN null ELSE toFloat(TP + TN ) / (TP + FP + FN + TN) END AS Accuracy
+,CASE WHEN TP_score + FP_score=0 THEN null ELSE toFloat(TP_score) / (TP_score + FP_score) END AS Adoption_Rate
+
+
+
+//Run Common Neighbors link prediction:
+
+WITH ["Hidenao Abe","Mario Lamberger","Kaoru Inoue"
+     ,"Gabriel Thierrin","Marcin Gogolewski"] AS author_names
+UNWIND author_names AS name
+MATCH (other:Authors)
+MATCH (author:Authors {author_name: name})
+OPTIONAL MATCH (author:Authors) - [r:CoAuthorLate] - (other:Authors)
+WHERE NOT (author) - [:CoAuthorEarly] - (other)
+WITH DISTINCT
+     author.author_name AS author
+    ,other.author_name AS coauthor
+    ,gds.alpha.linkprediction.commonNeighbors(author, other, {relationshipQuery: "CoAuthorEarly"}) AS score
+    ,COUNT(r) AS authors_found_in_test
+WITH DISTINCT author,coauthor,score,authors_found_in_test
+ ,CASE WHEN score > 0 AND authors_found_in_test = 1 THEN 1 ELSE 0 END AS TP
+ ,CASE WHEN score > 0 AND authors_found_in_test = 0 THEN 1 ELSE 0 END AS FP
+ ,CASE WHEN score = 0 AND authors_found_in_test = 0 THEN 1 ELSE 0 END AS TN
+ ,CASE WHEN score = 0 AND authors_found_in_test = 1 THEN 1 ELSE 0 END AS FN
+ ,CASE WHEN score > 0 AND authors_found_in_test = 1 THEN score ELSE 0 END AS TP_score
+ ,CASE WHEN score > 0 AND authors_found_in_test = 0 THEN score ELSE 0 END AS FP_score
+WITH DISTINCT(author) AS author
+ ,SUM(TP) AS TP
+ ,SUM(TP_score) AS TP_score
+ ,SUM(FP) AS FP
+ ,SUM(FP_score) AS FP_score
+ ,SUM(TN) AS TN,SUM(FN) AS FN
+RETURN  author,TP,FP,TN,FN
+,CASE WHEN TP + FN=0 THEN null ELSE toFloat(TP)/( TP + FN ) END AS Recall
+,CASE WHEN TP + FP=0 THEN null ELSE toFloat(TP) / ( TP + FP) END AS Presision
+,CASE WHEN TP + FP + FN + TN=0 THEN null ELSE toFloat(TP + TN ) / (TP + FP + FN + TN) END AS Accuracy,
+CASE WHEN TP_score + FP_score=0 THEN null ELSE toFloat(TP_score) / (TP_score + FP_score) END AS Adoption_Rate
+
+
+
+//Run Preferential Attachment link prediction:
+
+WITH ["Hidenao Abe","Mario Lamberger","Kaoru Inoue"
+     ,"Gabriel Thierrin","Marcin Gogolewski"] AS author_names
+UNWIND author_names AS name
+MATCH (other:Authors)
+MATCH (author:Authors {author_name: name})
+OPTIONAL MATCH (author:Authors) - [r:CoAuthorLate] - (other:Authors)
+WHERE NOT (author) - [:CoAuthorEarly] - (other)
+WITH DISTINCT
+     author.author_name AS author
+    ,other.author_name AS coauthor
+    ,gds.alpha.linkprediction.commonNeighbors(author, other, {relationshipQuery: "CoAuthorEarly"}) AS score
+    ,COUNT(r) AS authors_found_in_test
+WITH DISTINCT author,coauthor,score,authors_found_in_test
+ ,CASE WHEN score > 0 AND authors_found_in_test = 1 THEN 1 ELSE 0 END AS TP
+ ,CASE WHEN score > 0 AND authors_found_in_test = 0 THEN 1 ELSE 0 END AS FP
+ ,CASE WHEN score = 0 AND authors_found_in_test = 0 THEN 1 ELSE 0 END AS TN
+ ,CASE WHEN score = 0 AND authors_found_in_test = 1 THEN 1 ELSE 0 END AS FN
+ ,CASE WHEN score > 0 AND authors_found_in_test = 1 THEN score ELSE 0 END AS TP_score
+ ,CASE WHEN score > 0 AND authors_found_in_test = 0 THEN score ELSE 0 END AS FP_score
+WITH DISTINCT(author) AS author
+ ,SUM(TP) AS TP
+ ,SUM(TP_score) AS TP_score
+ ,SUM(FP) AS FP
+ ,SUM(FP_score) AS FP_score
+ ,SUM(TN) AS TN,SUM(FN) AS FN
+RETURN  author,TP,FP,TN,FN
+,CASE WHEN TP + FN=0 THEN null ELSE toFloat(TP)/( TP + FN ) END AS Recall
+,CASE WHEN TP + FP=0 THEN null ELSE toFloat(TP) / ( TP + FP) END AS Presision
+,CASE WHEN TP + FP + FN + TN=0 THEN null ELSE toFloat(TP + TN ) / (TP + FP + FN + TN) END AS Accuracy,
+CASE WHEN TP_score + FP_score=0 THEN null ELSE toFloat(TP_score) / (TP_score + FP_score) END AS Adoption_Rate
+
+_________________________________________________________________________________________________________________
+
+Appendix:
+
+MATCH (author:Authors)
+WHERE (author)-[:CoAuthorEarly]-()
+MATCH (author)-[:CoAuthorEarly*2..3]-(other)
+WHERE not((author)-[:CoAuthorEarly]-(other))
+RETURN author.author_name AS node1, author.author_name AS node2 , 0 as label
+LIMIT 92537
+UNION
+MATCH (author:Authors)-[:CoAuthorEarly]->(other:Authors)
+RETURN author.author_name AS node1, other.author_name AS node2, 1 AS label
+
+adamicAdar
+MATCH (a:Authors), (b:Authors)
+WHERE a<>b AND a.author_name<b.author_name AND not((a)-[:CoAuthor]-(b))
+RETURN a.author_name, b.author_name,
+gds.alpha.linkprediction.adamicAdar(a,b) AS score
+ORDER BY score DESC 
