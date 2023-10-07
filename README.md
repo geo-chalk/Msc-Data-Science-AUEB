@@ -1,7 +1,6 @@
-# MSc Data Science - AUEB
-
+# Table of contents
 - [MSc Data Science - AUEB](#msc-data-science---aueb)
-- [Details](#details)
+  - [Details](#details)
 - [Introduction](#introduction)
 - [Navigation](#navigation)
 - [About the program](#about-the-program)
@@ -11,8 +10,11 @@
       + [Year 2](#year-2)
 - [Disclaimer](#disclaimer)
 - [Contact Information](#contact-information)
-- 
-# Details
+
+--- 
+# MSc Data Science - AUEB
+
+## Details
 
 - **University:** Athens University of Economics and Business
 - **Program:** Master of Science in Data Science
