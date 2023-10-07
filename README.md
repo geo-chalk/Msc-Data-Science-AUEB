@@ -28,6 +28,8 @@
 - **Website:** [datascience.aueb.gr](https://datascience.aueb.gr)
 - **Final Grade**: 9.12/10
 
+--- 
+
 # Introduction
 
 Welcome to the repository for the projects completed during my Master in Data Science program at AUEB. This repository
@@ -37,6 +39,12 @@ organized within its respective folder, making it easy to explore and understand
 Each project contains the solution that was submitted, usually consisting of a report along with the code. To respect
 the work of the professors, the handouts and data are not included in the repository. In cases where the data is
 publicly available, corresponding links for data download are provided.
+
+<div style="text-align: right;">  
+    <a href="#table-of-contents">Back to top</a>  
+</div>  
+
+---
 
 # Navigation
 
@@ -52,6 +60,12 @@ The `README.md` also contains information regarding the course (number of projec
 projects, etc.). Moreover, the final grade of each course is mentioned. However, please note that this grade represents
 the aggregated grade, including the final exam. Most projects received a grade of 10/10, with some exceptions where the
 grade was 9.5/10.
+
+<div style="text-align: right;">  
+    <a href="#table-of-contents">Back to top</a>  
+</div>  
+
+---
 
 # About the program
 
@@ -95,7 +109,13 @@ whether this master's degree is suited for them.
     - The cost of education is a critical factor for students, and it's important to ensure that the program offers
       commensurate value. In my opinion, the program was too expensive, especially when comparing the price to other
       public universities across Greece.
-    - 
+
+<div style="text-align: right;">  
+    <a href="#table-of-contents">Back to top</a>  
+</div>  
+
+---
+
 ## Highlights
 
 In this section, I've highlighted some of the best assessments and projects, according to my opinion.
@@ -127,6 +147,13 @@ In this section, I've highlighted some of the best assessments and projects, acc
     - Description: Nice course with a LOT of assessments. The math behind the basic concepts of machine learning was
       explored during the assessments.
     - Folder: [Machine Learning and Computational Techniques](./Machine%20Learning%20and%20Computational%20Techniques)
+
+
+<div style="text-align: right;">  
+    <a href="#table-of-contents">Back to top</a>  
+</div>  
+
+---
 
 ## Course Order
 
@@ -185,6 +212,12 @@ journey more enjoyable.
 
 At this point I had gathered 78 ECTS points thus didn't have to take any courses.
 
+<div style="text-align: right;">  
+    <a href="#table-of-contents">Back to top</a>  
+</div>  
+
+---
+
 # Disclaimer
 
 **Please note that this repository is intended for educational and portfolio purposes only.** It represents my progress
@@ -196,6 +229,12 @@ contained herein.** It's important to adhere to the academic integrity policies 
 when using this repository as a reference. Copying or submitting any part of this work as your own without proper
 attribution may violate academic integrity rules and regulations.
 
+<div style="text-align: right;">  
+    <a href="#table-of-contents">Back to top</a>  
+</div>  
+
+--- 
+
 # Contact Information
 
 If you have any questions, want to discuss any of the projects in more detail, or simply want to connect, feel free to
@@ -203,3 +242,8 @@ reach out to me:
 
 - **Name:** George Chalkiopoulos
 - **Email:** geo.chalkiopoulos [at] gmail [dot] com
+
+<div style="text-align: right;">  
+    <a href="#table-of-contents">Back to top</a>  
+</div>  
+
