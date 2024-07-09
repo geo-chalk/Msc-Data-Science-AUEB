@@ -7,13 +7,15 @@ mining as well as hands-on practice on key issues in the area.
 
 ## Professor: Katia Papakonstantinopoulou
 
-## Course Structure
+## Details
+| Placeholder    | Details                                            | 
+|----------------|----------------------------------------------------|
+| Course setup   | * 3 homework assignments requiring coding and theory (60%) <br> * in-class final exam (38%) <br> * in-class contribution (2%) | 
+| Course Type    | Elective                                               | 
+| Final Grade    | 10/10                                             | 
 
-* 3 homework assignments requiring coding and theory (60%)
-* in-class final exam (38%)
-* in-class contribution (2%)
 
-## Requirements
+## Dependencies
 
 ### Project 1 - Snap.py
 
